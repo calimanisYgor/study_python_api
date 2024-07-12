@@ -36,9 +36,6 @@ def hello():
 def create_product():
     """
     Create a new product.
-
-    Returns:
-        tuple: A Flask response containing a success message and a status code.
     """
     data = request.json
     if 'name' in data and 'price' in data:
@@ -56,9 +53,6 @@ def delete_product(product_id):
 
     Args:
         product_id (int): The ID of the product to delete.
-
-    Returns:
-        tuple: A Flask response containing a success message and a status code.
     """
     product = Product.query.get(product_id)
     if product:
