@@ -43,7 +43,7 @@ paths:
         401:
           description: Unauthorized. Invalid credentials
   
-  /api/products:
+  /api/products/getAll:
     get:
       summary: Get a list of products
       responses:
@@ -56,7 +56,7 @@ paths:
         404:
           description: Not Found. No products available.
 
-  /api/products/{product_id}:
+  /api/products/getById/{product_id}:
     get:
       summary: Get product details by ID
       parameters:
@@ -105,7 +105,7 @@ paths:
         201:
           description: Product added successfully
         400:
-          description: Failed to add the product
+          description: Invalid product data
 
   /api/products/update/{product_id}:
     put:
